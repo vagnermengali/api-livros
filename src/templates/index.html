@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Livros - Documentação</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7fa;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            color: #16a085;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        h3 {
+            margin-top: 15px;
+        }
+        pre {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 5px solid #16a085;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: Consolas, monospace;
+            color: #c0392b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #16a085;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #eaf2f1;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        a {
+            color: #16a085;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 API Livros - Documentação</h1>
+
+    <h2>📌 Descrição</h2>
+    <p>A API Livros é uma API REST simples, construída com Flask e SQLite, que permite gerenciar livros. Você pode cadastrar novos livros e consultar os existentes.</p>
+
+    <h2>⚙️ Requisitos</h2>
+    <ul>
+        <li>Python 3.13 ou versão superior</li>
+        <li>Dependências listadas em <code>requirements.txt</code> ou <code>pyproject.toml</code></li>
+    </ul>
+
+    <h2>🚀 Como Instalar</h2>
+
+    <h3>Usando o pip</h3>
+    <ol>
+        <li>Clone o repositório ou baixe os arquivos da API.</li>
+        <li>Crie um ambiente virtual:
+            <pre><code>python3 -m venv venv</code></pre>
+        </li>
+        <li>Ative o ambiente virtual:
+            <pre><code>source venv/bin/activate (Linux/Mac)</code></pre>
+            <pre><code>venv\Scripts\activate (Windows)</code></pre>
+        </li>
+        <li>Instale as dependências:
+            <pre><code>pip install -r requirements.txt</code></pre>
+        </li>
+    </ol>
+
+    <h2>⚡ Como Executar</h2>
+    <p>A API estará disponível em <code>http://127.0.0.1:5000</code> após ser iniciada.</p>
+
+    <h2>📡 Endpoints</h2>
+    <h3>🏠 Página Inicial</h3>
+    <p><strong>URL:</strong> <code>/</code></p>
+    <p><strong>Método:</strong> GET</p>
+    <p><strong>Descrição:</strong> Retorna informações básicas sobre a API.</p>
+
+    <h3>📥 Cadastrar um Livro</h3>
+    <p><strong>URL:</strong> <code>/doar</code></p>
+    <p><strong>Método:</strong> POST</p>
+    <p><strong>Descrição:</strong> Cadastra um novo livro no sistema.</p>
+
+    <h4>Corpo da Requisição (JSON):</h4>
+    <pre><code>{
+  "titulo": "Título do livro",
+  "categoria": "Categoria do livro",
+  "autor": "Nome do autor",
+  "imagem_url": "https://url-da-imagem.com"
+}</code></pre>
+
+    <h3>📚 Listar Livros</h3>
+    <p><strong>URL:</strong> <code>/livros</code></p>
+    <p><strong>Método:</strong> GET</p>
+    <p><strong>Descrição:</strong> Retorna a lista de todos os livros cadastrados.</p>
+
+    <h2>📂 Estrutura do Banco de Dados</h2>
+    <table>
+        <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
+        <tr><td>ID</td><td>INTEGER</td><td>ID único d
