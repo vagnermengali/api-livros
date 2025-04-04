@@ -1,14 +1,16 @@
 [project]
-name = "apilivros"
+name = "vainaapi"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "VagnerMengali",email = "contatovagnermengali@gmail.com"}
+    {name = "JuniorD-Isael",email = "isaeldjunior@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9,<4.0"
 dependencies = [
     "flask (>=3.1.0,<4.0.0)",
+    "flask-cors (>=5.0.1,<6.0.0)",
+    "gunicorn (>=23.0.0,<24.0.0)",
 ]
 
 
@@ -19,4 +21,3 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.15.0"
 ruff = "^0.9.10"
-
